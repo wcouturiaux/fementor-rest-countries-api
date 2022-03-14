@@ -13,7 +13,7 @@ const Webpages = () => {
         <Router>
             <Routes>
                 <Route exact path="/" element= {<Home />} />
-                <Route path="/details" element = {<Details />} />
+                <Route path="/details/:country" element = {<Details />} />
             </Routes>
         </Router>
     );

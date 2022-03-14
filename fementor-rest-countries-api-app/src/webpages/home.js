@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [error, setError] = useState(null);
@@ -31,16 +32,20 @@ const Home = () => {
             <section className='countries'>
                 <div className='countries-container'>
                     {countries.map(country =>(
-                        <div className='country-container country-card'>
-                            <img 
-                                src={country.flags.svg}
-                                alt={'Flag of ' + country.name.common}
-                                className='flag-picture'
-                            />
-                            <h3 className='country-name'>{country.name.common}</h3>
-                            <p className='country-detail'>Population: {country.population}</p>
-                            <p className='country-detail'>Region: {country.region}</p>
-                            <p className='country-detail'>Capital: {country.capital}</p>
+                        <div key={country.name.common} className='country-container country-card'>
+                            <Link to={'/details/' + country.name.common}
+                                state= {country}
+                            >
+                                <img 
+                                    src={country.flags.svg}
+                                    alt={'Flag of ' + country.name.common}
+                                    className='flag-picture'
+                                />
+                                <h3 className='country-name'>{country.name.common}</h3>
+                                <p className='country-detail'>Population: {country.population}</p>
+                                <p className='country-detail'>Region: {country.region}</p>
+                                <p className='country-detail'>Capital: {country.capital}</p>
+                            </Link>
                         </div>
                     ))}
                 </div>
