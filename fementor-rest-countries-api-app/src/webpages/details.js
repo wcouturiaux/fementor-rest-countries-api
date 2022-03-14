@@ -7,7 +7,11 @@ const Details = () => {
     return(
         <div>
             <h1>{country.name.common}</h1>
-            <img src={country.flags.svg}></img>
+            <img 
+                src={country.flags.svg}
+                alt={'Flag of ' + country.name.common}
+            >
+            </img>
         </div>
     );
 }
