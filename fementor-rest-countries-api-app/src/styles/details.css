@@ -20,6 +20,14 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: var(--lt-bg-);
+}
+
+span {
+    font-weight: var(--bold-font);
+}
+
 body {
     padding-left: 4rem;
     padding-right: 4rem;
