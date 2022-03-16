@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import "../styles/details.css"
 
 const Details = () => {
     const location = useLocation();
@@ -7,11 +8,11 @@ const Details = () => {
     return(
         <>
         <button className='back-button'>Back</button>
-        <div>
-            <h1>{country.name.common}</h1>
+        <div className='details-container'>
             <img 
                 src={country.flags.svg}
                 alt={'Flag of ' + country.name.common}
+                className="flag-details"
             >
             </img>
             <div className='country-details'>
@@ -23,9 +24,10 @@ const Details = () => {
                 <p>Capital: {country.capital}</p>
                 <p>Top Level Domain: {country.tld}</p>
                 <p>Currency: {Object.keys(country.currencies).map(key=>(country.currencies[key].name+", "))}</p>
-            </div>
-            <div className='country-details' id='border-countries'>
-                <p>Border Countries: {country.borders.map(border=>(border + "\t"))}</p>
+            
+                <div className='borders' id='border-countries'>
+                    <p>Border Countries: {country.borders.map(border=>(border + "\t"))}</p>
+                </div>
             </div>
         </div>
         </>

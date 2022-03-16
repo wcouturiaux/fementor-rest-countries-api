@@ -8,4 +8,52 @@
     --dk-bg-color: hsl(207, 26%, 17%);
     --lt-txt-color: hsl(0, 0%, 52%);
     --font-family: "Nunito Sans", sans-serf;
+    --normal-font: 300;
+    --bold-font: 600;
+    --bolder-font: 800;
+}
+
+/* CSS Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+
+h2 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+p {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.details-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.details-container img {
+    max-width: 40%;
+}
+
+.country-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.borders {
+    padding-top: 2.5rem;
 }
