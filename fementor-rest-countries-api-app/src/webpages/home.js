@@ -39,7 +39,7 @@ const Home = () => {
                                 <img 
                                     src={country.flags.svg}
                                     alt={'Flag of ' + country.name.common}
-                                    className='flag-picture'
+                                    className='flag-home'
                                 />
                                 <h3 className='country-name'>{country.name.common}</h3>
                                 <p className='country-detail'>Population: {country.population}</p>

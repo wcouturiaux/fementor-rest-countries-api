@@ -5,6 +5,8 @@ const Details = () => {
     const location = useLocation();
     const country = location.state;
     return(
+        <>
+        <button className='back-button'>Back</button>
         <div>
             <h1>{country.name.common}</h1>
             <img 
@@ -26,6 +28,7 @@ const Details = () => {
                 <p>Border Countries: {country.borders.map(border=>(border + "\t"))}</p>
             </div>
         </div>
+        </>
     );
 }
 
