@@ -53,13 +53,15 @@ p {
 }
 
 .details-container img {
-    max-width: 40%;
+    width: 40vw;
+    aspect-ratio: 1.5;
 }
 
 .country-details {
     display: flex;
     flex-direction: column;
     text-align: left;
+    padding-top: 1rem;
 }
 
 .borders {
