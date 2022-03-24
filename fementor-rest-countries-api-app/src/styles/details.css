@@ -58,12 +58,26 @@ p {
 }
 
 .country-details {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
     text-align: left;
     padding-top: 1rem;
 }
 
+.country-details-1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+}
+
+.country-details-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
 .borders {
+    grid-row-start: 3;
     padding-top: 2.5rem;
 }
