@@ -6,8 +6,8 @@ const Details = () => {
     const location = useLocation();
     const country = location.state;
     return(
-        <>
-        <button className='back-button'>Back</button>
+        <div className='details-page'>
+        <button className='back-button'><span><i class="fa-solid fa-arrow-left-long"></i></span>{'\u00A0'}{'\u00A0'}Back</button>
         <div className='details-container'>
             <img 
                 src={country.flags.svg}
@@ -34,7 +34,7 @@ const Details = () => {
                 </div>
             </div>
         </div>
-        </>
+        </div>
     );
 }
 
